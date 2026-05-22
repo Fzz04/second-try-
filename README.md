@@ -39,12 +39,12 @@ No magic. No black box. Just networking fundamentals pushed to their logical con
   ┌──────────────────────────────────────────────────────────────┐
   │                  VMware NAT  ·  192.168.244.0/24             │
   │                                                              │
-  │  [💀 KALI]──────────────ARP POISON──────────[🎯 UBUNTU AGENT]│
+  │  [💀 KALI]──────────────ARP POISON──────────[🎯 debian]│
   │  192.168.244.129           ↕↕↕↕↕           192.168.244.128  │
   │         │            all traffic                             │
   │         │            rerouted here                           │
   │         ▼                                                    │
-  │  [🌐 UBUNTU SERVEUR]                                         │
+  │  [🌐 fedora]                                         │
   │   192.168.244.131                                            │
   │   Apache2 HTTP                                               │
   └──────────────────────────────────────────────────────────────┘
@@ -251,8 +251,8 @@ ARP has no verification mechanism by design. Any machine on the subnet can claim
 
 ```
 Kali Linux         —  attacker platform
-Ubuntu (Agent)     —  victim machine
-Ubuntu (Serveur)   —  Apache2 web server
+debian     —  victim machine
+fedora   —  Apache2 web server
 Wireshark          —  packet capture & analysis
 arpspoof (dsniff)  —  ARP cache poisoning
 VMware Workstation —  isolated virtual network
